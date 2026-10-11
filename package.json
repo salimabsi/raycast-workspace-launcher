@@ -1,0 +1,56 @@
+{
+  "$schema": "https://www.raycast.com/schemas/extension.json",
+  "name": "workspace-launcher",
+  "title": "Workspace Launcher",
+  "description": "Open apps and arrange them: four quarters on the external monitor, one full screen on the laptop.",
+  "icon": "extension-icon.png",
+  "author": "salimabsi",
+  "categories": [
+    "Productivity"
+  ],
+  "license": "MIT",
+  "commands": [
+    {
+      "name": "new-workspace",
+      "title": "Arrange Windows",
+      "subtitle": "Workspace Launcher",
+      "description": "Pick five apps, open and arrange them, and optionally save them as a workspace.",
+      "mode": "view"
+    },
+    {
+      "name": "workspaces",
+      "title": "Workspaces",
+      "subtitle": "Workspace Launcher",
+      "description": "Open, edit, delete saved workspaces, or make one its own Raycast command.",
+      "mode": "view"
+    },
+    {
+      "name": "open-workspace",
+      "title": "Open Workspace",
+      "subtitle": "Workspace Launcher",
+      "description": "Open a saved workspace by name.",
+      "mode": "no-view",
+      "arguments": [
+        {
+          "name": "name",
+          "type": "text",
+          "placeholder": "Workspace name",
+          "required": true
+        }
+      ]
+    }
+  ],
+  "dependencies": {
+    "@raycast/api": "^2.7.3",
+    "@raycast/utils": "^2.3.2"
+  },
+  "devDependencies": {
+    "@types/node": "^22.19.17",
+    "@types/react": "^19.0.10",
+    "typescript": "^5.9.3"
+  },
+  "scripts": {
+    "build": "ray build",
+    "dev": "ray develop"
+  }
+}
